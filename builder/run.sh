@@ -10,10 +10,7 @@ case "$1" in
 
     build)
         ./Dockerfile.sh > Dockerfile
-        ;;
-
-    build-local)
-        ./Dockerfile.sh | docker build --tag sleepdiaryproject/builder -f - .
+        # to create an image locally: docker build --tag sleepdiaryproject/builder .
         ;;
 
     upgrade)
